@@ -1,24 +1,56 @@
-# Library Management and Task Manager API
+# 📚 Library Management & Task Manager API
 
-## Question 1: Library Management System
-**Description**: A MySQL database for managing library operations including members, books, and loans.
+![MySQL](https://img.shields.io/badge/MySQL-8.0+-blue)
+![Node.js](https://img.shields.io/badge/Node.js-18%2B-green)
+![Express](https://img.shields.io/badge/Express-4.x-lightgrey)
+![REST API](https://img.shields.io/badge/REST-API-orange)
 
-**Setup**:
-1. Run `library.sql` in MySQL to create the database and tables.
-2. Sample data is included for testing.
+A dual-component system featuring:
+1. **Library Management Database** - Complete MySQL solution for tracking books, members, and loans
+2. **Task Manager API** - Full CRUD REST API for managing users and tasks
 
+## 🌟 Features
 
-## Question 2: Task Manager API
-**Description**: A CRUD API for managing users and tasks using Node.js and MySQL.
+### Library Management (MySQL)
+- Relational database design with 3 normalized tables
+- Proper constraints (PK, FK, UNIQUE, CHECK)
+- Sample dataset for immediate testing
+- ER Diagram: [View ERD](link_to_your_ERD_image.png)
 
-**Setup**:
-1. Create a `.env` file using `.env.example`.
-2. Run `task_manager.sql` to set up the database.
-3. Install dependencies with `npm install`.
-4. Start the server with `npm start`.
+### Task Manager API (Node.js + Express)
+- ✅ Full CRUD operations
+- 📦 MySQL database integration
+- 🛡️ Error handling middleware
+- 📅 Date validation for tasks
+- 🔍 JOIN operations between Users & Tasks
 
-**Endpoints**:
-- `GET /users` - List all users
-- `POST /users` - Create a user
-- `GET /tasks` - List all tasks
-- `POST /tasks` - Create a task
+## 🛠️ Tech Stack
+- **Database**: MySQL 8+
+- **Backend**: Node.js 18+, Express 4.x
+- **Libraries**: MySQL2, Dotenv, CORS
+
+## 🚀 Quick Start
+
+### Prerequisites
+- MySQL Server
+- Node.js 18+
+- npm 9+
+
+```bash
+# Clone repository
+git clone https://github.com/yourusername/project-repo.git
+cd project-repo
+
+# Install dependencies
+npm install
+
+# Set up databases
+mysql -u root -p < library.sql
+mysql -u root -p < task_manager.sql
+
+# Configure environment
+cp .env.example .env
+# Edit .env with your credentials
+
+# Start server
+npm start
