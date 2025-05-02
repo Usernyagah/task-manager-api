@@ -33,3 +33,17 @@ CREATE TABLE Loans (
     FOREIGN KEY (member_id) REFERENCES Members(member_id),
     FOREIGN KEY (isbn) REFERENCES Books(isbn)
 );
+
+-- Sample data
+INSERT INTO Members (name, email, phone, registration_date) VALUES
+('Alice Johnson', 'alice@example.com', '555-1234', '2023-01-15'),
+('Bob Smith', 'bob@example.com', '555-5678', '2023-02-20');
+
+INSERT INTO Books (isbn, title, publication_year, genre, total_copies, available_copies) VALUES
+('9780451524935', '1984', 1949, 'Dystopian', 5, 5),
+('9780061120084', 'To Kill a Mockingbird', 1960, 'Fiction', 3, 3);
+
+INSERT INTO Loans (member_id, isbn, loan_date, due_date, return_date) VALUES
+(1, '9780451524935', '2023-10-01', '2023-10-15', NULL),
+(2, '9780061120084', '2023-10-05', '2023-10-19', '2023-10-18');
+
